@@ -1,0 +1,1 @@
+# tak-sdk-cordova
