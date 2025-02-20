@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Others
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="logo-container">
+    <img src="assets/B38_Logo_blue.png" alt="Company logo" class="company-logo">
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button expand="block" (click)="generateRandom()" [disabled]="isRunningTAK">Generate random</ion-button>
+      </ion-col>
+      <ion-col size="4"></ion-col>
+      <ion-col size="4"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button expand="block" (click)="createRtiThread()" [disabled]="isRunningTAK">Create RTI Thread</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button expand="block" (click)="isRtiThreadActive()" [disabled]="isRunningTAK">Is RTI Thread Active?</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button expand="block" (click)="stopRtiThread()" [disabled]="isRunningTAK">Stop RTI Thread</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div *ngIf="isRunningTAK" class="spinner-container">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Running TAK...</p>
+  </div>
+</ion-content>
+
+<div #logContainer class="log-container" appAutoScroll>
+  <ul>
+    <li *ngFor="let msg of logMessages">{{msg}}</li>
+  </ul>
+</div>

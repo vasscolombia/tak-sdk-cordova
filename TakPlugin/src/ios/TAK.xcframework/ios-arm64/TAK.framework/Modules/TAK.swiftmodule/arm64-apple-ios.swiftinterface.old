@@ -1,0 +1,260 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TAK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+@_exported import TAK
+import TAKCore
+import TakTls
+import UIKit
+import _Concurrency
+import _StringProcessing
+@objc @_hasMissingDesignatedInitializers public class KeyInfo : NSObject {
+  final public let alias: String
+  final public let algorithm: KeyAlgorithm
+  final public let protectionLevel: KeyProtectionLevel
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FileProtector {
+  public func encrypt(plainData: Data) throws -> Data
+  public func decrypt(encryptedData: Data) throws -> Data
+  public func decrypt(fromFileNamed fileName: String) throws -> Data
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class DefaultTakTlsSocket : TakTlsSocket {
+  @objc public func read() throws -> Data
+  @objc public func write(_ data: Data) throws
+  @objc public func isOpen() -> Bool
+  @objc public func close() throws
+  @objc deinit
+}
+public enum JailbreakStatus {
+  case notJailbroken
+  case maybeJailbroken
+  case likelyJailbroken
+  case jailbroken
+  public static func == (a: TAK.JailbreakStatus, b: TAK.JailbreakStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class TlsConnection {
+  final public let peerCertificate: String
+  public func write(data: Data) throws
+  public func read() throws -> Data
+  public func close() throws
+  public func isOpen() -> Bool
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class RegisterResponse : NSObject {
+  final public let takIdentifier: String
+  final public let isLicenseAboutToExpire: Bool
+  @objc deinit
+}
+public class TAK {
+  public init(licenseFileName: String) throws
+  public func getTakVersion() throws -> String
+  public func getTakBuildNumber() throws -> String
+  public func isInitialized() -> Bool
+  public func release()
+  public func register(userHash: String?) throws -> RegisterResponse
+  public func checkIntegrity() throws -> CheckIntegrityResponse
+  @available(*, deprecated, renamed: "hashAndSign")
+  public func generateSignature(input: Data, signatureAlgorithm: SignatureAlgorithm) throws -> Data
+  @available(*, deprecated, renamed: "hashAndSign")
+  public func generateSignatureWithDefaultKey(input: Data, signatureAlgorithm: SignatureAlgorithm) throws -> Data
+  public func sign(keyAlias: String, signAlgorithm: SignatureAlgorithm, hashType: HashType, input: Data) throws -> Data
+  public func sign(key: TakInternalKey, signAlgorithm: SignatureAlgorithm, hashType: HashType, input: Data) throws -> Data
+  public func hashAndSign(keyAlias: String, signAlgorithm: SignatureAlgorithm, hashType: HashType, input: Data) throws -> Data
+  public func hashAndSign(key: TakInternalKey, signAlgorithm: SignatureAlgorithm, hashType: HashType, input: Data) throws -> Data
+  public func encrypt(keyAlias: String, encryptionAlgorithm: EncryptionAlgorithm, input: Data) throws -> EncryptionOutput
+  public func encrypt(key: TakInternalKey, encryptionAlgorithm: EncryptionAlgorithm, input: Data) throws -> EncryptionOutput
+  public func decrypt(keyAlias: String, encryptionAlgorithm: EncryptionAlgorithm, encryptionOutput: EncryptionOutput) throws -> Data
+  public func decrypt(key: TakInternalKey, encryptionAlgorithm: EncryptionAlgorithm, encryptionOutput: EncryptionOutput) throws -> Data
+  public func generateRandom(numBytes: Int32) throws -> Data
+  public func getTakIdentifier() throws -> String
+  @available(*, deprecated, renamed: "getCertificatePemFormat")
+  public func getClientCertificate() throws -> String
+  public func getCertificatePemFormat(key: TakInternalKey) throws -> String
+  public func getKeyInfo(keyAlias: String) throws -> KeyInfo
+  public func getKeyInfo(key: TakInternalKey) throws -> KeyInfo
+  public func isRegistered() throws -> Bool
+  public func reset() throws
+  public func isJailbroken() -> Bool
+  public func getAdvancedJailbreakStatus() throws -> JailbreakStatus?
+  public func getSecureStorage(storageName: String) throws -> SecureStorage
+  public func openTlsConnection(host: String, port: Int, timeout: Int = 30000) throws -> TlsConnection
+  public func getFileProtector() throws -> FileProtector
+  public func loadKey(wrappedKey: WrappedKey, keyAlias: String) throws
+  public func createRuntimeCheckThread(timeInterval: Int32 = 0) throws
+  public func stopRuntimeThread() throws
+  public func isRuntimeThreadActive(relaunch: Bool) -> Bool
+  public func keyGenerator(keyAlias: String, keyAlgorithm: KeyAlgorithm) throws
+  public func getPublicKey(keyAlias: String) throws -> Data
+  @objc deinit
+}
+@objc public class WrappedKey : NSObject {
+  final public let wrappedKeyData: EncryptionOutput
+  final public let keyAlgorithm: KeyAlgorithm
+  final public let wrappingAlgorithm: WrappingAlgorithm
+  final public let wrappingKeyAlias: String
+  public init(wrappedKeyData: EncryptionOutput, keyAlgorithm: KeyAlgorithm, wrappingAlgorithm: WrappingAlgorithm, wrappingKeyAlias: String)
+  @objc deinit
+}
+public class DefaultTakTlsSocketFactory : TakTlsSocketFactory {
+  public init(tak: TAK)
+  @objc public func connect(host: String, port: Int, timeout: Int) throws -> TakTlsSocket
+  @objc deinit
+}
+public enum TakError : Error {
+  case invalidParameter
+  case notInitialized
+  case alreadyRegistered
+  case licenseExpired
+  case networkTimeout
+  case networkError
+  case deviceMismatch
+  case certificateExpired
+  case notRegistered
+  case instanceWiped
+  case instanceLocked
+  case general
+  case invalidServerResponse
+  case notAvailable
+  case validationFailed
+  case updateFailed
+  case noFingerprint
+  case certificateError
+  @available(*, deprecated, renamed: "general")
+  case wbcError
+  case storageNotFound
+  case storageKeyNotFound
+  case storageAlreadyExists
+  public static func == (a: TAK.TakError, b: TAK.TakError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum WrappingAlgorithm {
+  case aesCbc
+  public static func == (a: TAK.WrappingAlgorithm, b: TAK.WrappingAlgorithm) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SignatureAlgorithm {
+  @available(*, deprecated, message: "Migrate crypto to ecdsa")
+  case rsaPkcs1v15
+  case ecdsa
+  @available(*, deprecated, renamed: "rsaPkcs1v15")
+  case rsa2048
+  public static func == (a: TAK.SignatureAlgorithm, b: TAK.SignatureAlgorithm) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum EncryptionAlgorithm {
+  case aesGcm
+  case aesEcb
+  case ecies
+  public static func == (a: TAK.EncryptionAlgorithm, b: TAK.EncryptionAlgorithm) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers public class CheckIntegrityResponse : NSObject {
+  final public let takIdentifier: String
+  final public let didReregister: Bool
+  final public let isLicenseAboutToExpire: Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SecureStorage {
+  public func write(key: String, value: Data) throws
+  public func write(key: String, value: String) throws
+  public func write(key: String, value: Int) throws
+  public func write(key: String, value: Bool) throws
+  public func read(key: String) throws -> Data
+  public func read(key: String) throws -> String
+  public func read(key: String) throws -> Int
+  public func read(key: String) throws -> Bool
+  public func deleteEntry(key: String) throws
+  public func delete() throws
+  @objc deinit
+}
+public enum TakInternalKey {
+  case defaultClientPrivateKey
+  case individualClientPrivateKey
+  case defaultEncryptionKey
+  case individualEncryptionKey
+  public static func == (a: TAK.TakInternalKey, b: TAK.TakInternalKey) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public class EncryptionOutput : NSObject {
+  final public let iv: Data?
+  final public let aad: Data?
+  final public let tag: Data?
+  final public let ephemeralKey: Data?
+  final public let ciphertext: Data
+  public init(iv: Data? = nil, aad: Data? = nil, tag: Data? = nil, ephemeralKey: Data? = nil, ciphertext: Data)
+  @objc deinit
+}
+public enum KeyProtectionLevel {
+  case wbcExportedObject
+  case wbcCommonObject
+  case secureEnclave
+  public static func == (a: TAK.KeyProtectionLevel, b: TAK.KeyProtectionLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum KeyAlgorithm {
+  case aes256
+  @available(*, deprecated, message: "Migrate crypto to ecSecp256r1")
+  case rsa2048
+  case ecSecp256r1
+  public static func == (a: TAK.KeyAlgorithm, b: TAK.KeyAlgorithm) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum HashType {
+  case none
+  case sha224
+  case sha256
+  case sha384
+  case sha512
+  public static func == (a: TAK.HashType, b: TAK.HashType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension TAK.JailbreakStatus : Swift.Equatable {}
+extension TAK.JailbreakStatus : Swift.Hashable {}
+extension TAK.TakError : Swift.Equatable {}
+extension TAK.TakError : Swift.Hashable {}
+extension TAK.WrappingAlgorithm : Swift.Equatable {}
+extension TAK.WrappingAlgorithm : Swift.Hashable {}
+extension TAK.SignatureAlgorithm : Swift.Equatable {}
+extension TAK.SignatureAlgorithm : Swift.Hashable {}
+extension TAK.EncryptionAlgorithm : Swift.Equatable {}
+extension TAK.EncryptionAlgorithm : Swift.Hashable {}
+extension TAK.TakInternalKey : Swift.Equatable {}
+extension TAK.TakInternalKey : Swift.Hashable {}
+extension TAK.KeyProtectionLevel : Swift.Equatable {}
+extension TAK.KeyProtectionLevel : Swift.Hashable {}
+extension TAK.KeyAlgorithm : Swift.Equatable {}
+extension TAK.KeyAlgorithm : Swift.Hashable {}
+extension TAK.HashType : Swift.Equatable {}
+extension TAK.HashType : Swift.Hashable {}

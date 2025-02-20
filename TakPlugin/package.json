@@ -1,0 +1,17 @@
+{
+  "name": "TakPlugin",
+  "version": "1.0.0",
+  "description": "Build38 Cordova TAK Plugin",
+  "cordova": {
+    "id": "build38-cordova-plugin-tak",
+    "platforms": ["android", "ios"]
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "tak",
+    "build38"
+  ],
+  "author": "Build38",
+  "license": "Apache-2.0"
+}

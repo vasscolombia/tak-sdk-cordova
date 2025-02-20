@@ -1,0 +1,1115 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "TypeDecl",
+        "name": "TakTlsSocketFactory",
+        "printedName": "TakTlsSocketFactory",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(host:port:timeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TakTlsSocket",
+                "printedName": "TakTls.TakTlsSocket",
+                "usr": "c:@M@TakTls@objc(pl)TakTlsSocket"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(pl)TakTlsSocketFactory(im)connectWithHost:port:timeout:error:",
+            "mangledName": "$s6TakTls0aB13SocketFactoryP7connect4host4port7timeoutAA0abC0_pSS_S2itKF",
+            "moduleName": "TakTls",
+            "genericSig": "<τ_0_0 where τ_0_0 : TakTls.TakTlsSocketFactory>",
+            "sugared_genericSig": "<Self where Self : TakTls.TakTlsSocketFactory>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@TakTls@objc(pl)TakTlsSocketFactory",
+        "mangledName": "$s6TakTls0aB13SocketFactoryP",
+        "moduleName": "TakTls",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TakTls",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Compression",
+        "printedName": "Compression",
+        "declKind": "Import",
+        "moduleName": "TakTls"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TakUrlProtocolImpl",
+        "printedName": "TakUrlProtocolImpl",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "takTlsSocketFactory",
+            "printedName": "takTlsSocketFactory",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TakTls.TakTlsSocketFactory?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TakTlsSocketFactory",
+                    "printedName": "TakTls.TakTlsSocketFactory",
+                    "usr": "c:@M@TakTls@objc(pl)TakTlsSocketFactory"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(cpy)takTlsSocketFactory",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC03takB13SocketFactoryAA0abgH0_pSgvpZ",
+            "moduleName": "TakTls",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TakTls.TakTlsSocketFactory?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TakTlsSocketFactory",
+                        "printedName": "TakTls.TakTlsSocketFactory",
+                        "usr": "c:@M@TakTls@objc(pl)TakTlsSocketFactory"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(cm)takTlsSocketFactory",
+                "mangledName": "$s6TakTls0A15UrlProtocolImplC03takB13SocketFactoryAA0abgH0_pSgvgZ",
+                "moduleName": "TakTls",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TakTls.TakTlsSocketFactory?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TakTlsSocketFactory",
+                        "printedName": "TakTls.TakTlsSocketFactory",
+                        "usr": "c:@M@TakTls@objc(pl)TakTlsSocketFactory"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(cm)setTakTlsSocketFactory:",
+                "mangledName": "$s6TakTls0A15UrlProtocolImplC03takB13SocketFactoryAA0abgH0_pSgvsZ",
+                "moduleName": "TakTls",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6TakTls0A15UrlProtocolImplC03takB13SocketFactoryAA0abgH0_pSgvMZ",
+                "mangledName": "$s6TakTls0A15UrlProtocolImplC03takB13SocketFactoryAA0abgH0_pSgvMZ",
+                "moduleName": "TakTls",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timeout",
+            "printedName": "timeout",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(cpy)timeout",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC7timeoutSivpZ",
+            "moduleName": "TakTls",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(cm)timeout",
+                "mangledName": "$s6TakTls0A15UrlProtocolImplC7timeoutSivgZ",
+                "moduleName": "TakTls",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(cm)setTimeout:",
+                "mangledName": "$s6TakTls0A15UrlProtocolImplC7timeoutSivsZ",
+                "moduleName": "TakTls",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6TakTls0A15UrlProtocolImplC7timeoutSivMZ",
+                "mangledName": "$s6TakTls0A15UrlProtocolImplC7timeoutSivMZ",
+                "moduleName": "TakTls",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allowSetConnectionCloseHeader",
+            "printedName": "allowSetConnectionCloseHeader",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(cpy)allowSetConnectionCloseHeader",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC29allowSetConnectionCloseHeaderSbvpZ",
+            "moduleName": "TakTls",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(cm)allowSetConnectionCloseHeader",
+                "mangledName": "$s6TakTls0A15UrlProtocolImplC29allowSetConnectionCloseHeaderSbvgZ",
+                "moduleName": "TakTls",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(cm)setAllowSetConnectionCloseHeader:",
+                "mangledName": "$s6TakTls0A15UrlProtocolImplC29allowSetConnectionCloseHeaderSbvsZ",
+                "moduleName": "TakTls",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6TakTls0A15UrlProtocolImplC29allowSetConnectionCloseHeaderSbvMZ",
+                "mangledName": "$s6TakTls0A15UrlProtocolImplC29allowSetConnectionCloseHeaderSbvMZ",
+                "moduleName": "TakTls",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "canInit",
+            "printedName": "canInit(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(cm)canInitWithRequest:",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC7canInit4withSb10Foundation10URLRequestV_tFZ",
+            "moduleName": "TakTls",
+            "static": true,
+            "overriding": true,
+            "objc_name": "canInitWithRequest:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "canonicalRequest",
+            "printedName": "canonicalRequest(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(cm)canonicalRequestForRequest:",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC16canonicalRequest3for10Foundation10URLRequestVAH_tFZ",
+            "moduleName": "TakTls",
+            "static": true,
+            "overriding": true,
+            "objc_name": "canonicalRequestForRequest:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startLoading",
+            "printedName": "startLoading()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(im)startLoading",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC12startLoadingyyF",
+            "moduleName": "TakTls",
+            "overriding": true,
+            "objc_name": "startLoading",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopLoading",
+            "printedName": "stopLoading()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(im)stopLoading",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC11stopLoadingyyF",
+            "moduleName": "TakTls",
+            "overriding": true,
+            "objc_name": "stopLoading",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "use",
+            "printedName": "use(_:for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLCredential",
+                "printedName": "Foundation.URLCredential",
+                "usr": "c:objc(cs)NSURLCredential"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLAuthenticationChallenge",
+                "printedName": "Foundation.URLAuthenticationChallenge",
+                "usr": "c:objc(cs)NSURLAuthenticationChallenge"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(im)useCredential:forAuthenticationChallenge:",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC3use_3forySo15NSURLCredentialC_So28NSURLAuthenticationChallengeCtF",
+            "moduleName": "TakTls",
+            "objc_name": "useCredential:forAuthenticationChallenge:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "continueWithoutCredential",
+            "printedName": "continueWithoutCredential(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLAuthenticationChallenge",
+                "printedName": "Foundation.URLAuthenticationChallenge",
+                "usr": "c:objc(cs)NSURLAuthenticationChallenge"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(im)continueWithoutCredentialForAuthenticationChallenge:",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC25continueWithoutCredential3forySo28NSURLAuthenticationChallengeC_tF",
+            "moduleName": "TakTls",
+            "objc_name": "continueWithoutCredentialForAuthenticationChallenge:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cancel",
+            "printedName": "cancel(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLAuthenticationChallenge",
+                "printedName": "Foundation.URLAuthenticationChallenge",
+                "usr": "c:objc(cs)NSURLAuthenticationChallenge"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(im)cancelAuthenticationChallenge:",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC6cancelyySo28NSURLAuthenticationChallengeCF",
+            "moduleName": "TakTls",
+            "objc_name": "cancelAuthenticationChallenge:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "rejectProtectionSpaceAndContinue",
+            "printedName": "rejectProtectionSpaceAndContinue(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLAuthenticationChallenge",
+                "printedName": "Foundation.URLAuthenticationChallenge",
+                "usr": "c:objc(cs)NSURLAuthenticationChallenge"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(im)rejectProtectionSpaceAndContinueWithChallenge:",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC32rejectProtectionSpaceAndContinue4withySo28NSURLAuthenticationChallengeC_tF",
+            "moduleName": "TakTls",
+            "objc_name": "rejectProtectionSpaceAndContinueWithChallenge:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "performDefaultHandling",
+            "printedName": "performDefaultHandling(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLAuthenticationChallenge",
+                "printedName": "Foundation.URLAuthenticationChallenge",
+                "usr": "c:objc(cs)NSURLAuthenticationChallenge"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(im)performDefaultHandlingForAuthenticationChallenge:",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC22performDefaultHandling3forySo28NSURLAuthenticationChallengeC_tF",
+            "moduleName": "TakTls",
+            "objc_name": "performDefaultHandlingForAuthenticationChallenge:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(request:cachedResponse:client:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TakUrlProtocolImpl",
+                "printedName": "TakTls.TakUrlProtocolImpl",
+                "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.CachedURLResponse?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CachedURLResponse",
+                    "printedName": "Foundation.CachedURLResponse",
+                    "usr": "c:objc(cs)NSCachedURLResponse"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URLProtocolClient?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URLProtocolClient",
+                    "printedName": "Foundation.URLProtocolClient",
+                    "usr": "c:objc(pl)NSURLProtocolClient"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl(im)initWithRequest:cachedResponse:client:",
+            "mangledName": "$s6TakTls0A15UrlProtocolImplC7request14cachedResponse6clientAC10Foundation10URLRequestV_So19NSCachedURLResponseCSgSo19NSURLProtocolClient_pSgtcfc",
+            "moduleName": "TakTls",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithRequest:cachedResponse:client:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@TakTls@objc(cs)TakUrlProtocolImpl",
+        "mangledName": "$s6TakTls0A15UrlProtocolImplC",
+        "moduleName": "TakTls",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSURLProtocol",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Foundation.URLProtocol",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TakTlsSocket",
+        "printedName": "TakTlsSocket",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "read",
+            "printedName": "read()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(pl)TakTlsSocket(im)readAndReturnError:",
+            "mangledName": "$s6TakTls0aB6SocketP4read10Foundation4DataVyKF",
+            "moduleName": "TakTls",
+            "genericSig": "<τ_0_0 where τ_0_0 : TakTls.TakTlsSocket>",
+            "sugared_genericSig": "<Self where Self : TakTls.TakTlsSocket>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(pl)TakTlsSocket(im)write:error:",
+            "mangledName": "$s6TakTls0aB6SocketP5writeyy10Foundation4DataVKF",
+            "moduleName": "TakTls",
+            "genericSig": "<τ_0_0 where τ_0_0 : TakTls.TakTlsSocket>",
+            "sugared_genericSig": "<Self where Self : TakTls.TakTlsSocket>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isOpen",
+            "printedName": "isOpen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(pl)TakTlsSocket(im)isOpen",
+            "mangledName": "$s6TakTls0aB6SocketP6isOpenSbyF",
+            "moduleName": "TakTls",
+            "genericSig": "<τ_0_0 where τ_0_0 : TakTls.TakTlsSocket>",
+            "sugared_genericSig": "<Self where Self : TakTls.TakTlsSocket>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "close",
+            "printedName": "close()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TakTls@objc(pl)TakTlsSocket(im)closeAndReturnError:",
+            "mangledName": "$s6TakTls0aB6SocketP5closeyyKF",
+            "moduleName": "TakTls",
+            "genericSig": "<τ_0_0 where τ_0_0 : TakTls.TakTlsSocket>",
+            "sugared_genericSig": "<Self where Self : TakTls.TakTlsSocket>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@TakTls@objc(pl)TakTlsSocket",
+        "mangledName": "$s6TakTls0aB6SocketP",
+        "moduleName": "TakTls",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 151,
+      "length": 7,
+      "value": "\"https\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 251,
+      "length": 3,
+      "value": "\"0\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 319,
+      "length": 10,
+      "value": "\"HTTP\/1.1\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 360,
+      "length": 6,
+      "value": "\"Host\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 397,
+      "length": 6,
+      "value": "\"\r\n\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 453,
+      "length": 17,
+      "value": "\"Accept-Encoding\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 516,
+      "length": 12,
+      "value": "\"Connection\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 579,
+      "length": 18,
+      "value": "\"Content-Encoding\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 649,
+      "length": 19,
+      "value": "\"Transfer-Encoding\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 717,
+      "length": 16,
+      "value": "\"Content-Length\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 777,
+      "length": 10,
+      "value": "\"Location\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 838,
+      "length": 18,
+      "value": "\"Www-Authenticate\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 901,
+      "length": 3,
+      "value": "302"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 952,
+      "length": 3,
+      "value": "307"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 1001,
+      "length": 6,
+      "value": "\"gzip\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 1049,
+      "length": 7,
+      "value": "\"close\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 1110,
+      "length": 9,
+      "value": "\"chunked\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1166,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1206,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TlsUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1256,
+      "length": 3,
+      "value": "401"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TakUrlProtocolImpl.swift",
+      "kind": "IntegerLiteral",
+      "offset": 817,
+      "length": 5,
+      "value": "30000"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TakUrlProtocolImpl.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1097,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/workspace\/workspace\/tak-client-ios-tls-extensions_v2.17.x_ci\/TakTlsExtensions\/TakUrlProtocolImpl.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1249,
+      "length": 1,
+      "value": "0"
+    }
+  ]
+}

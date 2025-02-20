@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="build38-cordova-plugin-tak"
+        version="1.0.0">
+    <name>TakPlugin</name>
+    <description>Build38 Cordova TAK Plugin</description>
+    <license>Apache-2.0</license>
+    <keywords>cordova,plugin,tak,build38</keywords>
+    
+    <js-module src="www/TakPlugin.js" name="TakPlugin">
+        <clobbers target="TAK"/>
+    </js-module>
+    
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="TakPlugin">
+                <param name="android-package" value="com.build38.tak.TakPlugin" />
+            </feature>
+            <dependency>
+                implementation fileTree(dir: 'libs', include: ['*.aar'])
+            </dependency>
+        </config-file>
+        <source-file src="src/android/tak-android-sdk.aar" target-dir="libs"/>
+        <source-file src="src/android/tak-android-tls-extensions.aar" target-dir="libs"/>
+
+        <source-file src="src/android/TakPlugin.java" target-dir="src/com/build38/tak" />
+        
+    </platform>
+    
+    
+    
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="TakPlugin">
+                <param name="ios-package" value="TakPlugin" />
+            </feature>
+        </config-file>
+        <framework src="src/ios/TAK.xcframework" custom="true" embed="true"/>
+        <framework src="src/ios/TakTls.xcframework" custom="true" embed="true"/>
+        <asset src="src/ios/TAK.xcframework" target="libs/TAK.xcframework"/>
+        <asset src="src/ios/TakTls.xcframework" target="libs/TakTls.xcframework"/>
+        <source-file src="src/ios/TakPlugin.swift" />
+        
+    </platform>
+</plugin>

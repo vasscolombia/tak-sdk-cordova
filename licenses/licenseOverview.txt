@@ -1,0 +1,40 @@
+
+License Overview:
+
+License Expiration Date: 2025-11-06,
+Compatible Library Version: 2.17.x,
+Compatible Build Number: 0,
+
+Service Provider Name: "Bancolombia",
+Service Provider Info ID: "adc2507e-8f98-41dd-a3a2-355a10eeeddd",
+
+App ID: "com.bancolombia.app",
+App Version": 1.0.0,
+
+License UUID: "77395023-fa26-4511-9d45-7948d8b5a951",
+
+Server Name: "Build38 Staging DFPv2",
+Server FQDN: "dfp.staging.build38.io",
+Server PORT: 443,
+Server Deployment Prefix: "/dfpfrontend/tak",
+
+Anonymise Device IDs Enabled: true,
+
+Advertising ID Enabled: true,
+
+Hardware Backed Enabled: true,
+
+AppLifted Detection Reaction: "wipeAndCrash",
+
+Debugger Detection Crash Tolerance: Development,
+Root Detection Crash Tolerance: Development,
+Emulator Detection Crash Tolerance: Development,
+Hooking Detection Crash Tolerance: Development,
+
+Library Expiration Warning Interval: 15 (days),
+Re-Register Interval: 15 (days),
+TLS Connection Timeout After: 10000 (ms),
+
+Server Certificate: "-----BEGIN CERTIFICATE-----\r\nMIIFYDCCA0igAwIBAgIBJDANBgkqhkiG9w0BAQsFADCBpjELMAkGA1UEBhMCREUx\r\nEDAOBgNVBAgMB0JhdmFyaWExDzANBgNVBAcMBk11bmljaDEVMBMGA1UECgwMQnVp\r\nbGQzOCBHbWJIMRYwFAYDVQQLDA1ULkEuSyBTZXJ2aWNlMSEwHwYDVQQDDBhULkEu\r\nSyBTZXJ2aWNlIFN0YWdpbmcgQ0ExIjAgBgkqhkiG9w0BCQEWE3N1cHBvcnRAYnVp\r\nbGQzOC5jb20wHhcNMjQwODA3MTUxNTA1WhcNMzQwODA1MTUxNTA1WjCBhDELMAkG\r\nA1UEBhMCREUxEDAOBgNVBAgMB0JhdmFyaWExDzANBgNVBAcMBk11bmljaDEVMBMG\r\nA1UECgwMQnVpbGQzOCBHbWJIMRYwFAYDVQQLDA1ULkEuSyBTZXJ2aWNlMSMwIQYD\r\nVQQDDBpULkEuSyBTZXJ2ZXJzIENBIFN0YWdpbmcgMjCCASIwDQYJKoZIhvcNAQEB\r\nBQADggEPADCCAQoCggEBAKYcYOaWrhLnvyUfnspbSamjh+9Jzz5CrQ+L2JbCXxA1\r\n75lju9qNJALurZwtEt3+tg3LpsJ3kefqnnRpfyoKV\/CAXqULECdl09njw+P+aqXS\r\nHd18exDbXEkXxKdZ5XYK2mVc8XJTYlm1YT6+XjsujMxAyT5sf9uKyyYJSk1KhDD0\r\ny3BZPRWhZSzamXz34o8u8DMlVc3iAdUq8NQEfkuflN8pfGHc1X2p7GdZ1CRgMkOi\r\n9eWsprv8WwtEkcIYDe\/YyCw8DbFhQcQqTAVktxdpRtl+xaDkWxsqtxv9MCdWMZiZ\r\nYCSczGYtF\/aJOSjB8VQXQPCbDQiYo\/UgjBK+NevvWosCAwEAAaOBuDCBtTAdBgNV\r\nHQ4EFgQUmUubuL4UxinQCs0EEUla6wiDyb0wcwYDVR0jBGwwaqFlpGMwYTELMAkG\r\nA1UEBhMCREUxEDAOBgNVBAgMB0JhdmFyaWExDzANBgNVBAcMBk11bmljaDEVMBMG\r\nA1UECgwMQnVpbGQzOCBHbWJIMRgwFgYDVQQDDA9CdWlsZDM4IFJvb3QgQ0GCAQsw\r\nDwYDVR0TAQH\/BAUwAwEB\/zAOBgNVHQ8BAf8EBAMCAYYwDQYJKoZIhvcNAQELBQAD\r\nggIBAC8Q4B3\/IiDbpOPFYdpOXj+xNepLWNstsxRuja8fsElfNAIkDvY\/rDcbv5vm\r\nGNaDe4PPrd6LbdIwMQo+gFHnGCgLeY+EX4ZCdyMBaG3B69O3N1C6DhUkZheGCPpq\r\nrSy9K+QzorRwN5G4cPzaDxQZGPmsKcB6naNTS\/xXQXTWgXIYEJebU9vk9FJ9RYEl\r\nc\/Szh91tdCLvPfaSgM2KT7WgVuHqedz354M\/QEy9yKm+NhjX1DQV460fKGtr7mh0\r\nQczcPNImC+z6lG345LM0R03ldWOMTfUkY7bRn285VoyeyY2YvjqE2suTavtV2YHG\r\nQcehz4ZU+GHbqO32w53XvOL\/4tOPFwJRdJCoMReo10C7lqD0VWHgmExrfG8X8b0m\r\nf8r8vwcTqj40Npa9+FwztqGb2yXOi1Tu0wEYGNIN7NKVjsf+j\/i7eI\/U1h0MTZJf\r\nqBgLtT2KMlC8n3HkLltg7i6\/kwJ57RxpBomifIOkQF56WEKQYbHMFedDGHafs4su\r\nW\/ZFV6eUVOAoHcVf\/fDBF4l18UeDo6j3Xhc4EQXmcRtCKzyWg5Azbr6TNP86pPRX\r\n\/Rs1o7aStDrSeXmYUgUt25Uq+ZuoH9CGhQykNd9k+qpUXOA9q\/23uVaf+ohcDs6J\r\nkbgc3QpFmZ2D5HDKMWlzOOP+lzotucHypA\/aeHHGbtXWnw16\r\n-----END CERTIFICATE-----",
+
+License Hash: 223632ec0cd3dd96f535d79d1024bc066afa1633b2a7c0f67a5646a945a3342d
